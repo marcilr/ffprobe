@@ -5,14 +5,16 @@ Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 ffprobe - ffprobe media prober
 
-ffprobe gathers information from multimedia streams and prints it in human- and machine-readable
-fashion.
+ffprobe gathers information from multimedia streams and prints it in
+human- and machine-readable fashion.
 
-For example it can be used to check the format of the container used by a multimedia stream and the
-format and type of each media stream contained in it.
+For example it can be used to check the format of the container used
+by a multimedia stream and the format and type of each media stream
+contained in it.
 
-If a filename is specified in input, ffprobe will try to open and probe the file content. If the file
-cannot be opened or recognized as a multimedia file, a positive exit code is returned.
+If a filename is specified in input, ffprobe will try to open and probe
+the file content. If the file cannot be opened or recognized as a
+multimedia file, a positive exit code is returned.
 
 --man
 
