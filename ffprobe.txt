@@ -1,0 +1,58 @@
+ffprobe.txt
+Created Sat Feb 14 17:25:25 AKST 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+ffprobe - ffprobe media prober
+
+ffprobe gathers information from multimedia streams and prints it in human- and machine-readable
+fashion.
+
+For example it can be used to check the format of the container used by a multimedia stream and the
+format and type of each media stream contained in it.
+
+If a filename is specified in input, ffprobe will try to open and probe the file content. If the file
+cannot be opened or recognized as a multimedia file, a positive exit code is returned.
+
+--man
+
+
+Syntax
+======
+ffprobe [options] [F<input_file>]
+
+
+Example
+=======
+malachite:~/Videos/drama/Toxin (2015) [DVDRip]$ ffprobe Toxin.m4v 
+ffprobe version 1.0.8 Copyright (c) 2007-2013 the FFmpeg developers
+  built on Sep 12 2013 11:57:09 with gcc 4.7 (Debian 4.7.2-5)
+  configuration: --prefix=/usr --extra-cflags='-g -O2 -fstack-protector --param=ssp-buffer-size                                                     =4 -Wformat -Werror=format-security ' --extra-ldflags='-Wl,-z,relro' --cc='ccache cc' --enable-                                                     shared --enable-libmp3lame --enable-gpl --enable-nonfree --enable-libvorbis --enable-pthreads -                                                     -enable-libfaac --enable-libxvid --enable-postproc --enable-x11grab --enable-libgsm --enable-li                                                     btheora --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libx264 --enable-libspee                                                     x --enable-nonfree --disable-stripping --enable-libvpx --enable-libschroedinger --disable-encod                                                     er=libschroedinger --enable-version3 --enable-libopenjpeg --enable-librtmp --enable-avfilter --                                                     enable-libfreetype --enable-libvo-aacenc --disable-decoder=amrnb --enable-libvo-amrwbenc --enab                                                     le-libaacplus --libdir=/usr/lib/x86_64-linux-gnu --disable-vda --enable-libbluray --enable-libc                                                     dio --enable-gnutls --enable-frei0r --enable-openssl --enable-libass --enable-libopus --enable-                                                     fontconfig --enable-libfdk-aac --enable-libdc1394 --disable-altivec --dis  libavutil      51. 7                                                     3.101 / 51. 73.101
+  libavcodec     54. 59.100 / 54. 59.100
+  libavformat    54. 29.104 / 54. 29.104
+  libavdevice    54.  2.101 / 54.  2.101
+  libavfilter     3. 17.100 /  3. 17.100
+  libswscale      2.  1.101 /  2.  1.101
+  libswresample   0. 15.100 /  0. 15.100
+  libpostproc    52.  0.100 / 52.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Toxin.m4v':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42isomavc1
+    creation_time   : 2015-01-30 00:07:14
+    encoder         : HandBrake rev20121007 2013022899
+  Duration: 01:20:41.21, start: 0.000000, bitrate: 1801 kb/s
+    Stream #0:0(und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 720x400                                                      [SAR 1:1 DAR 9:5], 1254 kb/s, 23.98 fps, 23.98 tbr, 90k tbn, 180k tbc
+    Metadata:
+      creation_time   : 2015-01-30 00:07:14
+    Stream #0:1(und): Audio: aac (mp4a / 0x6134706D), 48000 Hz, stereo, s16, 159 kb/s
+    Metadata:
+      creation_time   : 2015-01-30 00:07:14
+    Stream #0:2(und): Audio: ac3 (ac-3 / 0x332D6361), 48000 Hz, 5.1(side), s16, 384 kb/s
+    Metadata:
+      creation_time   : 2015-01-30 00:07:14
+malachite:~/Videos/drama/Toxin (2015) [DVDRip]$
+
+
+NOTE: 720x400 hence Toxin.m4v is a 720p movie.
